@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>AJAX, JSON, XML</title>
+
+<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <p id="name"></p>
+    <p id="price"></p>
+    
+</div>
+
+<script>
+
+$(document).ready(function() {
+    
+	var xml = "<product><name>Kurs jquery</name><price>56</price></product>";
+	xmlDocument = $.parseXML(xml);
+	$xml = $(xmlDocument);
+	$name = $xml.find("name");
+	$price = $xml.find("price");
+	$('#name').append($name.text());
+	$('#price').append($price.text());
+	
+});
+	
+</script>
+
+</body>
+</html>

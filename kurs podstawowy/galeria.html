@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>galeria</title>
+
+  <link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <script src="jquery-2.0.0.min.js"></script>
+<style>
+.zdjecie
+  {
+    float: left;
+    margin-left: 20px;
+  }
+#popup
+{
+    position: absolute;
+    display: none;
+  }
+</style>
+
+</head>
+<body>
+<div id="galeria">
+   <div class="zdjecie">
+      <img src="small/appchance.png" alt="">
+    </div>
+
+    <div class="zdjecie">
+      <img src="small/appchance.png" alt="">
+    </div>
+
+</div>
+
+<div id="popup">
+  <img src="" alt="">
+</div>
+
+
+
+
+<script>
+
+$(function(){
+  $('.zdjecie img').mouseover(function(){
+    var maly = $(this).attr('src');
+    var duzy = maly.replace('small', 'big');
+    $('#popup img').attr('src', duzy);
+    $('#popup').show();
+  }).mouseout(function () {
+    $('#popup').hide();
+  }).mosemove(function (e) {
+    $('#popup').css('left', e.pageX + 10);
+    $('#popup').css('top', e.pageY + 10);
+  })
+
+})
+
+
+</script>
+
+</body>
+</html>

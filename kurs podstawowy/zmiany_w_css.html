@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metody pomocnicze</title>
+
+  <link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <script src="jquery-2.0.0.min.js"></script>
+
+</head>
+<body>
+
+<div>
+
+  <div style="background: red; margin-bottom: 50px;">
+
+    <ul id="list">
+      <li> Tekst </li>
+
+
+    </ul>
+
+  </div>
+
+    <div style="background: blue">
+
+    <ul id="list">
+      <li> Tekst </li>
+
+
+    </ul>
+
+  </div>
+
+</div>
+
+<script>
+
+// selektor this
+
+$(function(){
+  $('div').mouseover(function(){
+    $(this).css('background', $('li').css('color'));
+  }).mouseout(function(){
+    $('div').css('background', 'blue');
+  });
+});
+
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Tworzenie pluginów</title>
+
+<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script src="jquery-2.0.0.min.js"></script>
+<script src="get-data.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+    <p id="intro" data-role='intro' data-lang='pl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	
+    <p id="par" data-role='description' data-lang='pl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales, odio sit amet adipiscing rutrum, dui turpis vehicula sem, ac ornare lacus magna convallis turpis. Praesent varius, sem ut fermentum sollicitudin, quam mauris mattis sem, non molestie diam mi sed enim. Nam eget velit dolor.</p>
+    
+    <p id="foot" data-role='footer' data-lang='pl'>Praesent varius, sem ut fermentum sollicitudin, quam mauris mattis sem, non molestie diam mi sed enim. Nam eget velit dolor.</p>
+
+</div>
+
+<script>
+
+$('p').getDataAttr('lang');
+	
+</script>
+
+</body>
+</html>

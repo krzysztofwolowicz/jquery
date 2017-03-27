@@ -1,0 +1,15 @@
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.img-wrap {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	border: #CCC 1px solid;
+}
+
+
+

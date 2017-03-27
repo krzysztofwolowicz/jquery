@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>AJAX, JSON, XML</title>
+
+<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <button id="bt" class="btn btn-primary">Wyślij</button>
+	
+    <div id="content">
+    </div>
+    
+</div>
+
+<script>
+
+$('#bt').click(function(){
+
+	$.getJSON('data.json',function(data){
+		var products = data.products;
+		var ul = $("<ul>");
+		var items = '';
+		$.each(products,function(i,v){
+			items += "<li>" + v.name + "</li>"; 
+		});
+		ul.html(items);
+		$('#content').append(ul);
+		
+	});
+	
+});
+	
+</script>
+
+</body>
+</html>

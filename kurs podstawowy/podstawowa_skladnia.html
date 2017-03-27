@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metody pomocnicze</title>
+
+  <link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <script src="jquery-2.0.0.min.js"></script>
+
+</head>
+<body>
+
+<div>
+
+  <div id="content">
+
+    <ul id="list">
+      <li> Tekst </li>
+
+
+    </ul>
+
+  </div>
+
+</div>
+
+<script>
+
+// // utworzenie funkcji
+//   function powitanie(){
+//     alert("witaj");
+//   }
+// // wywołanie funkcji
+//   var obj = jQuery(document);
+//   obj.ready(powitanie);
+
+// krótka wersja
+
+// $(document).ready(function (){
+//   alert("witaj  ")
+// });
+
+
+// $(document).ready(function(){
+//   alert("testujemy pierwszą funkcję")
+// });
+
+$(function(){
+  $('li').click(function(){
+    alert('witaj');
+  });
+});
+
+$(function(){
+  $('div').mouseover(function(){
+    console.log('najechano mysza')
+  });
+});
+
+$(function(){
+  $('div').mouseout(function(){
+    console.log('wyjechano mysza')
+  });
+});
+
+$(function(){
+  $('div').mousemove(function(){
+    console.log('ruch myszą')
+  }).click(function(){
+    console.log('kliknieto myszą');
+  }).mousedown(function(){
+    console.log('naciśniecie myszy');
+  }).mouseup(function(){
+    console.log('puszczono mysze');
+  })
+});
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

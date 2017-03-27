@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Techniki zaawansowane</title>
+
+<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+    
+    <div id="nav-buttons">
+        <button class="btn btn-inverse">Pierwszy</button>
+        <button class="btn">Drugi</button>
+        <button class="btn">Trzeci</button>
+        <button class="btn">Czwarty</button>
+        <button class="btn">Piąty</button>
+    </div>
+  	
+</div>   
+
+<script>
+
+$(document.documentElement).on('keyup',function(e){
+	
+	if(e.keyCode == 37){
+		$('.btn-inverse').prev().addClass('btn-inverse');
+		$('.btn-inverse').next().removeClass('btn-inverse');
+	} else if (e.keyCode == 39){
+		$('.btn-inverse').next().addClass('btn-inverse');
+		$('.btn-inverse').prev().removeClass('btn-inverse');
+	}
+	
+});
+
+</script>
+
+</body>
+</html>

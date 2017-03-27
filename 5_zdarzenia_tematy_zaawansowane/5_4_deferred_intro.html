@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Zdarzenia - techniki zaawansowane</title>
+
+<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">  	
+        
+</div>
+
+<script>
+var time = null;
+var rTime = null;
+var def = $.Deferred();
+
+def.done(function(){
+	alert("Pozostało: " + rTime + "S");
+});
+
+def.fail(function(){
+	alert('Koniec czasu');
+});
+
+setTimeout(function(){
+	def.reject();
+},5000);
+
+$(document).click(function(){
+	rTime = -($.now() - time)/1000;
+	def.resolve();
+});
+
+$(document).ready(function() {
+    time = $.now() + 5000;
+});
+
+</script>
+
+</body>
+</html>

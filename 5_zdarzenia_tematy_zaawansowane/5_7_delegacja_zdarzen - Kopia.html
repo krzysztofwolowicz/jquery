@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Techniki zaawansowane</title>
+
+<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<div id="content">
+    
+    	<img src="php_adv.png" alt="#" id="cover"/>
+        
+        <hr>
+        
+        <p id="p1"><button id="btn1" class="btn btn-primary">Następny</button></p>
+        <p id="p2"></p>
+        
+    </div>
+  	
+</div>   
+
+<script>
+
+/*$('img').on('click',function(){
+	imgAlert();
+});
+
+$('button').on('click',function(){
+	btnAlert();
+});*/
+
+function imgAlert(){
+	alert('IMG');
+};
+
+function btnAlert(){
+	alert('BUTTON');
+};
+
+$('#content').on('click','img, button',function(e){
+	e.preventDefault();
+	var t = e.target;
+	
+	switch(t.tagName.toLowerCase()){
+		case 'img':
+		imgAlert();
+		break;
+		case 'button':
+		btnAlert();
+		break;
+		default:
+	}
+	
+});
+
+var newBtn = $('<button>',{
+	id: 'btn2',
+	'class': 'btn btn-primary',
+	text: 'Poprzedni'
+});
+
+$('#p2').append(newBtn);
+
+</script>
+
+</body>
+</html>

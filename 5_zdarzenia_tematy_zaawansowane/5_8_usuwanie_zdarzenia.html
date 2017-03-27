@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Techniki zaawansowane</title>
+
+<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script src="jquery-2.0.0.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+    <img id="cover" src="php_adv.png" alt="">
+    <hr>
+    <p id="info"></p>
+	<button id="add" class="btn btn-inverse">Dodaj</button>
+    <button id="remove" class="btn btn-inverse">Usuń</button>
+  	
+</div>   
+
+<script>
+
+$(document).ready(function() {
+    
+	$('#add').on('click',function(){
+		$('#cover').on('click',function(){
+			alert('IMG');
+		});
+		$('#info').html('dodano zdarzenie');
+	});
+	
+	$('#remove').on('click',function(){
+		$('#cover').off('click');
+		$('#info').html('usunięto zdarzenie');
+	});
+	
+});
+
+
+
+</script>
+
+</body>
+</html>

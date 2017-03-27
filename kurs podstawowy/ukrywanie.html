@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metody pomocnicze</title>
+
+  <link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <script src="jquery-2.0.0.min.js"></script>
+
+  <style>
+
+ ul{
+  list-style: none;
+  width: 200px;
+  float: left;
+  padding: 0px;
+  display: block;
+  overflow: auto;
+  text-align: center;
+ }
+ li{
+  height: 30px;
+  background: #f8f8f8;
+  cursor: pointer;
+  border: 1px solid;
+  margin-right: 20px;
+ }
+ #recenzje{
+  float: left;
+  border: 5px solid;
+  border-radius: 15px;
+  padding: 10px;
+  width: 400px;
+ }
+
+ #recenzje div{
+
+  display: none;
+ }
+
+</style>
+
+</head>
+<body>
+  <ul id="menu">
+    <li id="tabl1">Władca pierścieni</li>
+    <li id="tabl2"> Harry Potter</li>
+    <li id="tabl3">Iron Man</li>
+  </ul>
+
+  <div id="recenzje">
+    <div id="recenzja1">
+      <h3> Władca pierścieni</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quo accusantium qui aliquid. Modi vel nesciunt, possimus adipisci distinctio, ut accusamus placeat eius accusantium non, quos suscipit, voluptate similique rem!</p>
+    </div>
+    <div id="recenzja2">
+      <h3>Harry Potter</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quidem, doloribus dolores similique ipsum commodi repellat tempora voluptas iure, blanditiis, temporibus repudiandae error vitae quae. Distinctio nostrum temporibus, ut esse.</p>
+    </div>
+    <div id="recenzja3">
+      <h3>Iron Man</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nostrum tenetur architecto cumque fugiat. Explicabo, hic, perferendis. Laudantium illum delectus doloremque molestiae, sunt modi. Fuga impedit sit aliquid ratione libero.</p>
+    </div>
+  </div>
+
+<script>
+
+// show i toogle działa bardzo podobnie
+
+$(function(){
+  $('#recenzja1').show();
+  $('#menu li').css('background', 'white')
+  $('#tabl1').css('background', 'grey')
+
+  $('#tabl1').click(function(){
+    $('#recenzje div').hide();
+    $('#recenzja1').toggle();
+    $('#menu li').css('background', 'white')
+    $('#tabl1').css('background', 'grey')
+  })
+
+  $('#tabl2').click(function(){
+    $('#recenzje div').hide();
+    $('#recenzja2').toggle();
+    $('#menu li').css('background', 'white')
+    $('#tabl2').css('background', 'grey')
+  })
+  $('#tabl3').click(function(){
+    $('#recenzje div').hide();
+    $('#recenzja3').toggle();
+    $('#menu li').css('background', 'white')
+    $('#tabl3').css('background', 'grey')
+  })
+
+});
+
+
+
+</script>
+
+

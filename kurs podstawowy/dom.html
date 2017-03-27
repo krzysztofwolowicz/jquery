@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metody pomocnicze</title>
+
+  <link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <script src="jquery-2.0.0.min.js"></script>
+
+</head>
+<body>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dolorem recusandae tempora quaerat hic veritatis? Fugiat dolorem inventore quaerat nesciunt quisquam reiciendis porro eaque ratione sunt expedita animi, dignissimos similique!</p>
+
+<script>
+
+// dodawanie na początku (prepend) i na końcu (append) znaczników dodatkowych wartości np stringów
+
+$(function(){
+  $('p').prepend('<strong> Tekst pogrubiony</strong>').append('<strong> Tekst pogrubiony</strong>')
+})
+
+// bardzą podobną funkcją jest appendTo z tym, że zmienia się składnia
+
+$(function(){
+  $('<strong> Tekst pogrubiony</strong>').appendTo('p')
+})
+
+// tworzenie dodatkowych selektorów i danych przed i po danym znaczniku
+
+$(function(){
+  $('p').before('<div></div>').after('<strong></strong>')
+  $('<div></div>').insertBefore('p')
+  $('<strong></strong>').insertAfter('p')
+})
+
+// wpisanie selektora p w div
+
+$(function(){
+  $('p').wrap('<div></div>')
+})
+
+// odwrotna funkcja do powyższej
+$(function(){
+  $('p').wrapInner('<div></div>')
+})
+
+// usunięcie znacznika który znajduje się w innym znaczniku. Np w p jest div to po tej funkcji zostanie usunięty
+
+$(function(){
+  $('p').wrapInner('<div></div>')
+  $('div').remove();
+})
+
+</script>

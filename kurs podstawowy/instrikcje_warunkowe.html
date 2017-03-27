@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metody pomocnicze</title>
+
+  <link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <script src="jquery-2.0.0.min.js"></script>
+
+</head>
+<body>
+<button>Tak</button>
+<button>Nie</button>
+<button>Nie mam zdania</button>
+<button>Nie wiem o co chodzi</button>
+
+<div></div>
+
+
+<script>
+
+// funkcja if
+
+// $(function(){
+//   $('button').click(function(){
+//     if($(this).html() == 'Tak'){
+//       $('div').html('Kliknięto przycisk tak')
+//     } else{
+//       $('div').html('Kliknięto przycisk nie')
+//     }
+//   });
+// });
+
+
+
+
+
+
+
+
+// $(function(){
+//   $('button').click(function(){
+//     if($(this).html() == 'Tak'){
+//       $('div').html('Wygrałeś')
+//     } else{
+//       $('div').html('przegrałeś')
+//     }
+//   })
+// })
+
+
+// $(function(){
+//   $('button').click(function(){
+//     ($(this).html()== 'Tak') ? $('div').html('Kliknieto przycisk tak') : $('div').html('Kliknięto przycisk nie')
+//   })
+// })
+
+
+
+
+// $(function(){
+//   $('button').click(function(){
+//     ($(this).html() == 'Tak'? $('div').html('tak') : $('div').html('nie'))
+//   })
+// })
+
+
+// funkcja swich
+
+// $(function(){
+//   $('button').click(function(){
+//     switch($(this).html()){
+//       case 'Tak' : $('div').html('Tak'); break;
+//       case 'Nie' : $('div').html('Nie'); break;
+//       case 'Nie mam zdania' : $('div').html('Nie mam zdania'); break;
+//     }
+//   })
+// })
+
+
+// $(function(){
+//   $('button').click(function(){
+//     switch($(this).html()){
+//       case 'Tak' : $('div').html('1'); break;
+//       case 'Nie' : $('div').html('2'); break;
+//       case 'Nie mam zdania' : $('div').html('3'); break;
+//     }
+//   })
+// })
+
+
+// $(function(){
+//   $('button').click(function(){
+//     switch($(this).html()){
+//       case 'Tak' : $('div').html('Tak'); break;
+//       case 'Nie' : $('div').html('Nie'); break;
+//       case 'Nie mam zdania' : $('div').html('Nie mam zdania'); break;
+//       default: $('div').html('strzelaj'); break;
+//     }
+//   })
+// })
+
+
+
+$(function(){
+  $('button').click(function(){
+    switch($(this).html()){
+      case 'Tak' : $('div').html('Tak'); break;
+      case 'Nie' : $('div').html('nie'); break;
+      default: $('div').html('strzelaj'); break;
+    }
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
